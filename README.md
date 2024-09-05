@@ -6,8 +6,8 @@
   Abra o Git Bash (no Windows) ou o terminal (no Mac/Linux).
   Configure o nome e email do Git:
   exemplo, use o seu:
-   git config --global user.name "Andressa172"
-   git config --global user.email "andressa.dinizff@gmail.com"
+   |git config --global user.name "Andressa172"
+   |git config --global user.email "andressa.dinizff@gmail.com"
 
 
 3) Clonar o repositório
@@ -18,9 +18,9 @@
   
 4) Subir alterações para a branch de homologacao
   Após fazer modificações no código, siga esses passos:
-   git add .
-   git commit -m "Descrição das mudanças"
-   git push origin homolog
+   |git add .
+   |git commit -m "Descrição das mudanças"
+   |git push origin homolog
 
    
 5) Criar um Pull Request (PR)
