@@ -19,10 +19,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
+  --laranja-unoeste: #ff8437;
+  --verde-unoeste: #003c2a;
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #34b7a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #003c2a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -43,6 +45,7 @@
 modelos nossos
 */
 
+/*
 ul li {
   position: relative;
   display: inline-block;
@@ -66,6 +69,8 @@ ul li {
 ul li:hover ~ .cursor {
   transform: scale(6) translate(-50%, -50%);
 }
+*/
+
 /*
 modelos nossos
 */
@@ -74,7 +79,7 @@ modelos nossos
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #e9e8e6;
+  --background-color: var(--verde-unoeste);
   --surface-color: #ffffff;
 }
 
@@ -596,7 +601,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--laranja-unoeste);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -610,7 +615,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: #ad5117;
   color: var(--contrast-color);
 }
 
@@ -1446,7 +1451,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background-color: var(--laranja-unoeste);
 }
 
 /*--------------------------------------------------------------
