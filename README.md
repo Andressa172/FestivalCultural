@@ -1,7 +1,16 @@
 # FestivalCultural
 
-#Como usar o GitHub na sua máquina local, e políticas de contribuição para o projeto
+#Como usar o GitHub na sua máquina local, políticas de contribuição para o projeto e utilizacao do php para o formulario de inscrição
 
+#Configuracao do php - Formulario de Inscricao
+sudo apt update
+sudo apt install php-cli
+cd /home/andressa/Documentos/Unoeste/Web/primeiroBimestre/FestivalCultural/    -> modifique para o seu repositorio
+php -S localhost:8000
+http://localhost:8000/inscricao.html      -> abra o navegador e acesse o formulario através dessa URL
+
+
+#Configuracao do GitHub:
 1) Configurar o Git
   Abra o Git Bash (no Windows) ou o terminal (no Mac/Linux).
   Configure o nome e email do Git:
