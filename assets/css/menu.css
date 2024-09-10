@@ -1,0 +1,97 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: white;
+}
+
+.logom {
+    max-height: 36px;
+    margin-right: 8px;
+    margin-left: 3rem;}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003c2a;
+}
+
+#menu {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background-color: #003c2a;
+    height: 0;
+    z-index: 1000;
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#menu a {
+    display: flex;
+    justify-content: right;
+    margin-right: 3rem;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #FF8C42; /* Cor laranja */
+    padding: 10px 15px;
+    font-size: 0.75 rem; /* tamnho da letra*/
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    gap: 10px;
+    margin-right: 3rem;
+}
+
+#hambuguer {
+    border-top: 2px solid white; /* Cor branca */
+    width: 20px;
+}
+
+#hambuguer::before, #hambuguer::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white; /* Cor branca */
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+
+
+#nav.active #menu {
+    visibility: visible;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+} /*  aqui faz o menu descer e aparecer as opções*/
+
+#menu a {
+    margin: 0.5rem;
+    margin-right: 4rem;
+}
+#menu li{
+    text-decoration: none;
+    list-style: none;
+}
