@@ -1,6 +1,7 @@
 body, ul {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 a {
@@ -42,6 +43,7 @@ a:hover {
 }
 
 #menu a {
+    color: white;
     display: flex;
     justify-content: right;
     margin-right: 3rem;
