@@ -127,34 +127,34 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url('/assets/img/FestivalCultural 13.jpg');
+  background-image: url('../img/FestivalCultural\ 13.jpg');
 }
 .card[for="c2"] {
-  background-image: url('/assets/img/FestivalCultural 12.jpg');
+  background-image: url('../img/FestivalCultural 12.jpg');
 }
 .card[for="c3"] {
-  background-image: url('/assets/img/FestivalCultural 8.jpg');
+  background-image: url('../img/FestivalCultural 8.jpg');
 }
 .card[for="c4"] {
-  background-image: url('/assets/img/FestivalCultural 7.jpg');
+  background-image: url('../img/FestivalCultural 7.jpg');
 }
 .card[for="c5"] {
-  background-image: url('/assets/img/FestivalCultural 6.jpg');
+  background-image: url('../img/FestivalCultural 6.jpg');
 }
 .card[for="c6"] {
-  background-image: url('/assets/img/FestivalCultural 5.jpg');
+  background-image: url('../img/FestivalCultural 5.jpg');
 }
 .card[for="c7"] {
-  background-image: url('/assets/img/FestivalCultural 4.jpg');
+  background-image: url('../img/FestivalCultural 4.jpg');
 }
 .card[for="c8"] {
-  background-image: url('/assets/img/FestivalCultural 3.jpg');
+  background-image: url('../img/FestivalCultural 3.jpg');
 }
 .card[for="c9"] {
-  background-image: url('/assets/img/FestivalCultural 2.jpg');
+  background-image: url('../img/FestivalCultural 2.jpg');
 }
 .card[for="c10"] {
-  background-image: url('/assets/img/FestivalCultural 1.jpg');
+  background-image: url('../img/FestivalCultural 1.jpg');
 }
 
 /*
