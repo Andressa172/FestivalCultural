@@ -188,6 +188,18 @@ ul li:hover ~ .cursor {
 }
 */
 
+  /* Para telas menores, as imagens ficarão uma abaixo da outra */
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column;
+  }
+
+  .portfolio-item img {
+    max-width: 100%; /* As imagens vão ocupar 100% da largura */
+  }
+}
+
+
 /*
 modelos nossos
 */
@@ -498,7 +510,7 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 0.75 rem;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -691,7 +703,7 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
-    font-size: 32px;
+    font-size: 0.75 rem;
     top: 15px;
     right: 15px;
     margin-right: 0;
