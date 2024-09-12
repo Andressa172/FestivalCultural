@@ -188,6 +188,12 @@ ul li:hover ~ .cursor {
 }
 */
 
+.bi-x::before,
+.bi-list::before {
+  content: none; /* Isso remove os ícones */
+}
+
+
   /* Para telas menores, as imagens ficarão uma abaixo da outra */
 @media (max-width: 768px) {
   .portfolio-item {
