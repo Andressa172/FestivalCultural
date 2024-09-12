@@ -1686,3 +1686,55 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.slideshow-container {
+  position: relative;
+  height: 50rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 610%; /* 6 slides, cada um ocupando 16.66% */
+  height: 100%;
+  animation: slide 60s linear infinite; /* Ciclo de 60s e loop infinito linear */
+  width: calc(100% * 6);
+  overflow-x: hidden;
+}
+
+.slide {
+  width: 16.66%; /* Cada slide ocupa 16.66% do container */
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* ... (restante do seu CSS) */
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(calc(-100% * 6)); }
