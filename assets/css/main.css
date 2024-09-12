@@ -1715,16 +1715,13 @@ section,
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 610%; /* 6 slides, cada um ocupando 16.66% */
+  width: 700%; /* 6 slides no total */
   height: 100%;
-  animation: slide 60s linear infinite; /* Ciclo de 60s e loop infinito linear */
-  width: calc(100% * 6);
-  overflow-x: hidden;
+  animation: slide 40s linear infinite;
 }
 
 .slide {
@@ -1737,7 +1734,7 @@ section,
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Cobre o slide sem deixar espaços */
 }
 
 .caption {
@@ -1752,8 +1749,7 @@ section,
   font-size: 14px;
 }
 
-/* ... (restante do seu CSS) */
-
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(calc(-100% * 6)); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Movimenta até o final dos 6 slides */
+}
