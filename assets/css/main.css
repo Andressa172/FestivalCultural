@@ -188,6 +188,31 @@ ul li:hover ~ .cursor {
 }
 */
 
+[vw-access-button] {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Garante que a janela de tradução apareça separada do ícone */
+[vw-plugin-wrapper] {
+  position: fixed;
+  bottom: 80px; /* Alinhado acima do botão, mas ajustável */
+  right: 20px;
+  z-index: 999; /* Abaixo do ícone */
+}
+
+/* Oculta a janela de tradução até que o ícone seja clicado */
+[vw-plugin-wrapper] {
+  display: none;
+}
+
+/* Quando o botão for clicado, exibe a janela de tradução */
+[vw-access-button].active + [vw-plugin-wrapper] {
+  display: block;
+}
 .bi-x::before,
 .bi-list::before {
   content: none; /* Isso remove os ícones */
