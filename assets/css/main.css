@@ -47,18 +47,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 15px; /* Adiciona espaçamento nas laterais */
 }
 
 .carrossel {
   height: 400px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  overflow-x: auto; /* Permite rolagem horizontal em telas pequenas*/
   justify-content: start;
 }
 
 .card {
   width: 80px;
   border-radius: .75rem;
+  height: 100%; /* Altura ajustada para celular */
   background-size: cover;
   cursor: pointer;
   overflow: hidden;
@@ -125,6 +128,71 @@ input:checked + label {
 input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px)
+{
+  .card {
+    width: 80px; /* Reduz o tamanho das cards em telas menores */
+  }
+
+  .card > .row > .icon {
+    width: 40px;
+    height: 70px; /* Ajusta o tamanho do ícone */
+  }
+
+  .card > .row > .description {
+    width: 300px; /* Reduz a largura da descrição */
+  }
+
+  input:checked + label {
+    width: 350px; /* Ajusta a largura da card expandida */
+  }
+
+  .description h4 {
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+  }
+
+  .description p {
+    font-size: 12px; /* Ajusta o tamanho da fonte da descrição */
+  }
+
+  h2 {
+    font-size: 30px; /* Ajusta o tamanho do título principal em telas pequenas */
+  }
+
+  .wrapper {
+    height: auto; /* Permite que a altura da seção se ajuste conforme o conteúdo */
+  }
+}
+
+@media (max-width: 576px)
+{
+  .card {
+    width: 70px; /* Menor tamanho para telas bem pequenas */
+  }
+
+  .card > .row > .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card > .row > .description {
+    width: 200px;
+  }
+
+  input:checked + label {
+    width: 300px; /* tamanho da imagem na abertura*/
+  }
+
+  .description h4 {
+    font-size: 16px;
+  }
+
+  .description p {
+    font-size: 11px;
+  }  
 }
 
 .card[for="c1"] {
