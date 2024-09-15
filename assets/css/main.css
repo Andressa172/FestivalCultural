@@ -162,31 +162,61 @@ input:checked + label .description {
 modelos nossos
 */
 
-/*
-ul li {
-  position: relative;
-  display: inline-block;
-  margin: 10px 0;
-  font-size: 4em;
-  text-decoration: none;
-  color: #fff;
+.box {
+  width: 100%; /* Cobre toda a largura da página */
+  max-width: 1200px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza a box na página */
+  padding: 2rem;
+  font-size: 20px;
+  color: white;
+  background-color: var(--verde-unoeste); /* Cor de fundo para destacar a box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para efeito de elevação */
+  border-radius: 8px; /* Bordas arredondadas */
 }
 
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  transition: transform 0.1s;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+.content-wrapper {
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente no centro */
+  justify-content: space-between; /* Cria espaço entre o texto e a imagem */
+  flex-wrap: wrap; /* Permite que os elementos se reorganizem em telas menores */
 }
 
-ul li:hover ~ .cursor {
-  transform: scale(6) translate(-50%, -50%);
+.box p {
+  flex: 1; /* O texto ocupará o espaço necessário */
+  margin-right: 2rem; /* Espaço entre o texto e a imagem */
+  line-height: 1.6; /* Melhor legibilidade */
 }
-*/
+
+.image-container {
+  flex-shrink: 0; /* Evita que a imagem diminua além do tamanho definido */
+  margin-top: 1rem; /* Espaço superior no modo empilhado */
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 500px; /* Limita o tamanho da imagem */
+  height: auto; /* Mantém as proporções da imagem */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+  }
+
+  .box p {
+    margin-right: 0; /* Remove o espaçamento lateral no modo empilhado */
+    margin-bottom: 1rem; /* Adiciona um espaçamento inferior entre o texto e a imagem */
+  }
+
+  .image-container {
+    width: 100%; /* A imagem ocupará 100% da largura disponível */
+  }
+}
+
+
+
 .containerr{
   padding: 2rem;
 }
@@ -828,16 +858,16 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid white;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: white;
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: rgba(255, 255, 255, 0.473);
+  border-color: rgba(255, 255, 255, 0.473);
 }
 
 .footer .credits {
