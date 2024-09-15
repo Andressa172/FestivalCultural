@@ -915,9 +915,6 @@ h6 {
   margin-bottom: 0;
 }
 
-.footer .social-links {
-  margin-top: 20px;
-}
 
 .footer .social-links a {
   display: flex;
@@ -943,6 +940,27 @@ h6 {
   font-size: 13px;
   text-align: center;
 }
+
+  #footer {
+    text-align: center; /* Centraliza todo o conteúdo dentro do rodapé */
+    padding: 20px 0; /* Adiciona um padding para espaçamento */
+  }
+
+  .logo-link {
+    display: inline-block; /* Faz o link ocupar apenas o espaço necessário */
+    margin: 0 auto; /* Garante a centralização do link dentro do rodapé */
+  }
+
+  .logo-image {
+    width: 350px; /* Define a largura da imagem */
+    transition: opacity 0.3s; /* Transição suave para o efeito de hover */
+  }
+
+  .logo-link:hover .logo-image {
+    opacity: 0.4; /* Deixa a imagem 50% transparente ao passar o mouse */
+  }
+
+
 
 /*--------------------------------------------------------------
 # Preloader
