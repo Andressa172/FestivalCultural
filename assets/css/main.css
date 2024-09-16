@@ -230,42 +230,58 @@ input:checked + label .description {
 modelos nossos
 */
 
+
+
 .box {
-  width: 100%; /* Cobre toda a largura da página */
-  max-width: 1200px; /* Define uma largura máxima */
-  margin: 0 auto; /* Centraliza a box na página */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
   font-size: 20px;
   color: white;
-  background-color: var(--verde-unoeste); /* Cor de fundo para destacar a box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para efeito de elevação */
-  border-radius: 8px; /* Bordas arredondadas */
+  background-color: var(--verde-unoeste);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .content-wrapper {
   display: flex;
-  align-items: center; /* Alinha o conteúdo verticalmente no centro */
-  justify-content: space-between; /* Cria espaço entre o texto e a imagem */
-  flex-wrap: wrap; /* Permite que os elementos se reorganizem em telas menores */
+  justify-content: space-between; /* Espaça o texto e a imagem */
+  align-items: flex-start; /* Alinha os itens no topo */
+  flex-wrap: wrap; /* Para garantir que em telas pequenas os itens fiquem empilhados */
+}
+
+.content-wrapper-atracoes {
+  justify-content: space-between; /* Espaça o texto e a imagem */
+  align-items: flex-start; /* Alinha os itens no topo */
+  flex-wrap: wrap; /* Para garantir que em telas pequenas os itens fiquem empilhados */
+}
+
+.box h2 {
+  text-align: center;
+  width: 100%; /* Faz o título ocupar toda a largura acima */
+  margin-bottom: 1rem;
 }
 
 .box p {
-  flex: 1; /* O texto ocupará o espaço necessário */
-  margin-right: 2rem; /* Espaço entre o texto e a imagem */
-  line-height: 1.6; /* Melhor legibilidade */
+  flex: 1; /* O parágrafo ocupará o máximo possível de espaço */
+  text-align: justify;
+  line-height: 1.6;
+  margin-right: 2rem; /* Espaço entre o parágrafo e a imagem */
 }
 
 .image-container {
-  flex-shrink: 0; /* Evita que a imagem diminua além do tamanho definido */
-  margin-top: 1rem; /* Espaço superior no modo empilhado */
+  flex-shrink: 0; /* Impede que a imagem diminua excessivamente */
+  max-width: 500px; /* Limita o tamanho da imagem */
+  margin-top: 1rem;
 }
 
 .image-container img {
   width: 100%;
-  max-width: 500px; /* Limita o tamanho da imagem */
-  height: auto; /* Mantém as proporções da imagem */
-  border-radius: 8px; /* Bordas arredondadas na imagem */
+  height: auto;
+  border-radius: 8px;
 }
+
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
