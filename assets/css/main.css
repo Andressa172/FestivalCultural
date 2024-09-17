@@ -1958,6 +1958,10 @@ section,
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); } /* Movimenta até o final dos 6 slides */
 }
+
+
+
+
 /* Estilos padrões para telas maiores (desktop) */
 .DEsquerda, .DDireita {
   display: flex;
