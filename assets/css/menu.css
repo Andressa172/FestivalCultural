@@ -1,23 +1,24 @@
-body, ul {
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    font-family: sans-serif;
-}
-
-a:hover {
-    color: white;
-}
-
-.logom {
+.logoHeader {
     max-height: 36px;
     margin-right: 8px;
-    margin-left: 3rem;}
+    margin-left: 3rem;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .logoHeader {
+        max-height: 30px; /* Reduz o tamanho da logo para telas menores */
+        margin-left: 2rem; /* Ajusta a margem */
+    }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    .logoHeader {
+        max-height: 24px; /* Reduz ainda mais o tamanho da logo para telas pequenas */
+        margin-left: 1rem; /* Ajusta a margem */
+    }
+}
 
 #header {
     box-sizing: border-box;
@@ -55,18 +56,18 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     color: white;
-    background-color: #FF8C42; /* Cor laranja */
+    background-color: #FF8C42;
     padding: 10px 15px;
-    font-size: 0.75 rem; /* tamnho da letra*/
+    font-size: 0.75rem;
     border: none;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     cursor: pointer;
     gap: 10px;
     margin-right: 3rem;
 }
 
 #hambuguer {
-    border-top: 2px solid white; /* Cor branca */
+    border-top: 2px solid white;
     width: 20px;
 }
 
@@ -75,25 +76,24 @@ a:hover {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: white; /* Cor branca */
+    background-color: white;
     margin-top: 5px;
     transition: .3s;
     position: relative;
 }
 
-
-
 #nav.active #menu {
     visibility: visible;
     height: calc(100vh - 70px);
     overflow-y: auto;
-} /*  aqui faz o menu descer e aparecer as opções*/
+}
 
 #menu a {
     margin: 0.5rem;
     margin-right: 4rem;
 }
-#menu li{
+
+#menu li {
     text-decoration: none;
     list-style: none;
 }
