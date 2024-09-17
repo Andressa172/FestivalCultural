@@ -230,6 +230,18 @@ input:checked + label .description {
 modelos nossos
 */
 
+.services .service-item.item-green-unoeste i {
+  color: var(--verde-unoeste);
+}
+
+.services .service-item.item-green-unoeste:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-green-unoeste:hover .icon path {
+  fill: var(--verde-unoeste);
+}
+
 
 
 .box {
