@@ -230,6 +230,20 @@ input:checked + label .description {
 modelos nossos
 */
 
+.img-container {
+  overflow: hidden;
+  border-radius: 55px; /* Opcional, para manter o arredondamento no contêiner */
+}
+
+.img-haroldo {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-haroldo:hover {
+  transform: scale(1.2); /* Ajuste o valor conforme necessário */
+}
+
 .services .service-item.item-green-unoeste i {
   color: var(--verde-unoeste);
 }
@@ -241,6 +255,46 @@ modelos nossos
 .services .service-item.item-green-unoeste:hover .icon path {
   fill: var(--verde-unoeste);
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Certifica que a imagem não ultrapasse o tamanho da tela */
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* O texto segue a largura da imagem */
+  height: 100%; /* Ocupa toda a altura da imagem */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semitransparente */
+  font-size: clamp(14px, 2vw, 24px); /* Limita o tamanho da fonte entre 14px e 24px */
+}
+
+.overlay-text p {
+  margin: 0;
+  max-width: 50%; /* Controla a largura do texto para ser responsivo */
+  line-height: 1.4;
+}
+
+
+
+
+
+
 
 
 
