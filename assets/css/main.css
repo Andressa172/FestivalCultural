@@ -1978,20 +1978,20 @@ section,
 }
 .slideshow-container {
   position: relative;
-  height: 50rem;
+  height: 30rem; /* Reduzi a altura */
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 1000px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem; /* Reduzi o padding */
+  padding-bottom: 1rem;
 }
 
 .slides {
   display: flex;
   width: 700%; /* 6 slides no total */
-  height: 100%;
+  height: 90%;
   animation: slide 40s linear infinite;
 }
 
@@ -2003,7 +2003,7 @@ section,
 }
 
 .slide img {
-  width: 100%;
+  width: 85%; /* Reduzi a largura das imagens */
   height: 100%;
   object-fit: cover; /* Cobre o slide sem deixar espaços */
 }
@@ -2014,10 +2014,10 @@ section,
   background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   text-align: center;
-  width: 100%;
-  padding: 10px;
+  width: 85%; /* Reduzi a largura da legenda */
+  padding: 8px; /* Ajustei o padding */
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 12px; /* Reduzi o tamanho da fonte */
 }
 
 @keyframes slide {
@@ -2025,113 +2025,3 @@ section,
   100% { transform: translateX(-100%); } /* Movimenta até o final dos 6 slides */
 }
 
-
-
-
-/* Estilos padrões para telas maiores (desktop) */
-.DEsquerda, .DDireita {
-  display: flex;
-  flex-direction: column; /* Organizar conteúdo em coluna */
-  align-items: center; /* Alinhar o conteúdo ao centro */
-  position: relative; /* Garantir que o conteúdo interno seja posicionado corretamente */
-  margin: 3rem;
-}
-
-.DEsquerda h2, .DDireita h2 {
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  text-align: center; /* Centralizar o texto */
-}
-
-.DEsquerda h2:after, .DDireita h2:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Alinhar conteúdo no começo */
-}
-
-.conteudo img {
-  width: 25rem; /* Largura ajustada para rem */
-  height: 25rem; /* Altura ajustada para rem */
-  background-color: blue; /* Cor de fundo, caso a imagem não carregue */
-  margin-right: 1.5rem; /* Espaço entre a imagem e o parágrafo */
-}
-
-.conteudo p {
-  margin: 0;
-  font-size: 1rem;
-  color: #000;
-}
-
-/* Responsividade para telas menores (tablets) */
-@media (max-width: 768px) {
-  .conteudo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .conteudo img {
-    width: 20rem;
-    height: 20rem;
-    margin-bottom: 1rem;
-  }
-
-  .conteudo p {
-    margin: 0;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .DEsquerda, .DDireita {
-    margin: 2rem;
-  }
-  
-  .DEsquerda h2, .DDireita h2 {
-    font-size: 28px;
-  }
-}
-
-/* Responsividade para telas pequenas (smartphones) */
-@media (max-width: 480px) {
-  .conteudo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .conteudo img {
-    width: 15rem;
-    height: 15rem;
-    margin-bottom: 1rem;
-  }
-
-  .conteudo p {
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .DEsquerda, .DDireita {
-    margin: 1rem;
-  }
-  
-  .DEsquerda h2, .DDireita h2 {
-    font-size: 24px;
-  }
-}
