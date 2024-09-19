@@ -1078,6 +1078,7 @@ h6 {
   .logo-link {
     display: inline-block; /* Faz o link ocupar apenas o espaço necessário */
     margin: 0 auto; /* Garante a centralização do link dentro do rodapé */
+    
   }
 
   .logo-image {
