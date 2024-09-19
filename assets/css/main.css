@@ -230,6 +230,53 @@ input:checked + label .description {
 modelos nossos
 */
 
+/* Classe para o efeito hover com neon */
+.box-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--verde-unoeste); /* Cor de fundo escura para destacar o neon */
+  color: rgba(255, 255, 255, 0.452); /* Cor do texto padrão */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Efeito ao passar o mouse */
+.box-hover-effect:hover {
+  transform: scale(1.05); /* Aumenta a caixa em 5% */
+  box-shadow: 0 0 20px rgb(196, 196, 196), 0 0 40px rgb(196, 196, 196), 0 0 60px rgb(196, 196, 196); /* Efeito de sombra neon */
+  background-color: --verde-unoeste; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Classe para o efeito hover com neon na imagem */
+.hover-img-neon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra leve ao redor da imagem */
+}
+
+/* Efeito neon ao passar o mouse */
+/*
+.hover-img-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #858585, 0 0 40px #cacaca, 0 0 60px #cacaca; 
+}
+*/
+
+/* Efeito neon ao passar o mouse */
+.hover-img-neon:hover {
+  box-shadow: 0 0 20px var(--verde-unoeste), 0 0 40px var(--verde-unoeste), 0 0 60px #cacaca; /* Efeito de sombra neon roxa */
+}
+
+
+/* Efeito neon no texto */
+.box-hover-effect h2, .box-hover-effect p {
+  transition: text-shadow 0.3s ease;
+}
+
+.box-hover-effect:hover h2, .box-hover-effect:hover p {
+  text-shadow: 0 0 10px #ffffff50, 0 0 20px #ffffff65, 0 0 30px #ffffff6b; /* Brilho neon no texto */
+}
+
+
+
 .img-container {
   overflow: hidden;
   border-radius: 55px; /* Opcional, para manter o arredondamento no contêiner */
