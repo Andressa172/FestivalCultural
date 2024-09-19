@@ -224,13 +224,18 @@ input:checked + label .description {
 }
 .card[for="c10"] {
   background-image: url('../img/FestivalCultural 1.jpg');
-}
-
+}     
+   
 /*
 modelos nossos
 */
 
 /* Classe para o efeito hover com neon */
+
+.footer {
+  z-index: 10;
+}
+
 .box-hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--verde-unoeste); /* Cor de fundo escura para destacar o neon */
