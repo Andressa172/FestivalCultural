@@ -1975,24 +1975,25 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+
 }
 .slideshow-container {
   position: relative;
-  height: 30rem; /* Reduzi a altura */
+  height: 30rem; /* Altura ajustada */
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 1000px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  padding-top: 1rem; /* Reduzi o padding */
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .slides {
   display: flex;
-  width: 700%; /* 6 slides no total */
+  width: 600%; /* 6 slides no total */
   height: 90%;
-  animation: slide 40s linear infinite;
+  animation: slide 50s linear infinite;
 }
 
 .slide {
@@ -2003,9 +2004,9 @@ section,
 }
 
 .slide img {
-  width: 85%; /* Reduzi a largura das imagens */
+  width: 100%; /* A imagem agora ocupa 100% do slide */
   height: 100%;
-  object-fit: cover; /* Cobre o slide sem deixar espaços */
+  object-fit: cover; /* A imagem cobre o slide sem deixar espaços */
 }
 
 .caption {
@@ -2014,14 +2015,15 @@ section,
   background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   text-align: center;
-  width: 85%; /* Reduzi a largura da legenda */
-  padding: 8px; /* Ajustei o padding */
+  width: 100%;
+  padding: 8px;
   box-sizing: border-box;
-  font-size: 12px; /* Reduzi o tamanho da fonte */
+  font-size: 12px;
 }
 
 @keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); } /* Movimenta até o final dos 6 slides */
 }
+
 
