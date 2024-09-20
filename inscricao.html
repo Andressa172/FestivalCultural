@@ -36,25 +36,24 @@
   <header id="header" >
     <a href="index.html" class="logom">
       <img  class="logoHeader" src="assets/img/UnoesteLogo.png" alt="logotipo unoeste"></a>
-    <nav id="nav">
-        <buttton class="mobile-nav-toggle" id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-           MENU <span id="hambuguer"></span>
-        </buttton>
-        <ul id="menu" role="menu">
+      <nav id="nav">
+        <button class="mobile-nav-toggle" id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            MENU <span id="hambuguer"></span>
+        </button>
+        <ul id="menu" role="menu" tabindex="-1">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="atracoes.html">Atrações</a></li>
             <li><a href="edicoesAnteriores.html">Edições anteriores</a></li>
             <li><a style="color: rgba(255, 255, 255, 0.527);" href="inscricao.html">Inscrição</a></li>
             <li><a href="https://www.unoeste.br/semanas/2023/35infoeste/Index">Voltar para Infoeste</a></li>
         </ul>
-    </nav>
+      </nav>
   </header>
 <main class="main">
-    <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="container section-title" data-aos="fade-up">
         <h2 style="font-size: 50px;">Inscrição</h2>
-      </div><!-- End Section Title -->
+      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-5">
@@ -67,28 +66,28 @@
                   <p>Rua José Bongiovani, 700 - CEP 19050-920
                     Bloco H - 1º andar - Presidente Prudente SP</p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Telefone</h3>
                   <p>(18) 3229-1060</p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-whatsapp flex-shrink-0"></i>
                 <div>
                   <h3>WhatsApp</h3>
                   <p>(18) 99105-4306</p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>E-mail</h3>
                   <p>fipp@unoeste.edu.br</p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
               <iframe title="localização da Unoeste no Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.8219606375337!2d-51.40529518785914!3d-22.13276291058586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45b18f82b4f%3A0xc61c929c186b7d81!2sFIPP!5e0!3m2!1sen!2sus!4v1725729481872!5m2!1sen!2sus" 
               width="600" height="450" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"></iframe></div>
@@ -97,18 +96,15 @@
           <div class="col-lg-7">
             <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-              
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Nome completo</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
                 </div>
-          
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">E-mail</label>
                   <input type="email" class="form-control" name="email" id="email-field" required="">
                 </div>
                 
-                <!-- Campo CPF -->
                 <div class="col-md-6">
                   <label for="cpf-field" class="pb-2">CPF</label>
                   <input type="text" class="form-control" name="cpf" id="cpf-field" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required="">
@@ -137,10 +133,10 @@
                 </div>
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </section>
   </main>
 
   <footer id="footer" class="footer light-background">
@@ -195,5 +191,4 @@
     btnMobile.addEventListener('touchstart', toggleMenu);
   </script>
 </body>
-
 </html>

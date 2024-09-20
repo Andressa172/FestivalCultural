@@ -1,23 +1,9 @@
-/**
-* Template Name: Kelly
-* Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --laranja-unoeste: #ff8437;
   --verde-unoeste: #003c2a;
@@ -29,7 +15,6 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #444444;  /* The default color of the main navmenu links */
   --nav-hover-color: #34b7a7; /* Applied to main navmenu links when they are hovered over or active */
@@ -68,7 +53,7 @@
   border-radius: 2rem;
   margin: 0 10px;
   display: flex;
-  position: relative; /* Permite posicionamento absoluto dos elementos dentro da card */
+  position: relative;
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
@@ -151,15 +136,15 @@ input:checked + label .description {
   }
 
   .description h4 {
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    font-size: 14px;
   }
 
   .description p {
-    font-size: 12px; /* Ajusta o tamanho da fonte da descrição */
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 30px; /* Ajusta o tamanho do título principal em telas pequenas */
+    font-size: 30px;
   }
 
   .wrapper {
@@ -230,46 +215,72 @@ input:checked + label .description {
 modelos nossos
 */
 
-/* Classe para o efeito hover com neon */
-
 .footer {
   z-index: 10;
 }
 
 .box-hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--verde-unoeste); /* Cor de fundo escura para destacar o neon */
-  color: rgba(255, 255, 255, 0.452); /* Cor do texto padrão */
+  background-color: var(--verde-unoeste);
+  color: rgba(255, 255, 255, 0.452);
   padding: 20px;
   border-radius: 10px;
 }
 
-/* Efeito ao passar o mouse */
 .box-hover-effect:hover {
-  transform: scale(1.05); /* Aumenta a caixa em 5% */
+  transform: scale(1.05);
   box-shadow: 0 0 20px rgb(196, 196, 196), 0 0 40px rgb(196, 196, 196), 0 0 60px rgb(196, 196, 196); /* Efeito de sombra neon */
-  background-color: --verde-unoeste; /* Muda a cor de fundo ao passar o mouse */
+  background-color: --verde-unoeste; 
 }
 
-/* Classe para o efeito hover com neon na imagem */
 .hover-img-neon {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra leve ao redor da imagem */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
-/* Efeito neon ao passar o mouse */
-/*
+.hover-img-neon-rosa {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
 .hover-img-neon:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #858585, 0 0 40px #cacaca, 0 0 60px #cacaca; 
+  box-shadow: 0 0 20px var(--verde-unoeste), 0 0 40px var(--verde-unoeste), 0 0 60px #cacaca; 
 }
-*/
 
-/* Efeito neon ao passar o mouse */
+.hover-img-neon-esquerda:hover {
+  box-shadow: 0 0 20px #2505b3a4, 0 0 40px #d60047bb, 0 0 60px #2505b3a4; 
+}
+
+.hover-img-neon-meio:hover {
+  box-shadow: 0 0 20px #2505b3a4, 0 0 40px #00c8d6bb, 0 0 60px #2505b3a4; 
+}
+
+.hover-img-neon-direita:hover {
+  box-shadow: 0 0 20px #d6000bbb, 0 0 40px #d6000bbb, 0 0 60px #ff000dbb; 
+}
+
+.hover-img-neon,
+.hover-img-neon-esquerda,
+.hover-img-neon-meio,
+.hover-img-neon-direita {
+  transition: box-shadow 0.6s ease;
+}
+
 .hover-img-neon:hover {
-  box-shadow: 0 0 20px var(--verde-unoeste), 0 0 40px var(--verde-unoeste), 0 0 60px #cacaca; /* Efeito de sombra neon roxa */
+  box-shadow: 0 0 20px var(--verde-unoeste), 0 0 40px var(--verde-unoeste), 0 0 60px #cacaca; 
 }
 
+.hover-img-neon-esquerda:hover {
+  box-shadow: 0 0 20px #2505b3a4, 0 0 40px #d60047bb, 0 0 60px #2505b3a4; 
+}
+
+.hover-img-neon-meio:hover {
+  box-shadow: 0 0 20px #2505b3a4, 0 0 40px #00c8d6bb, 0 0 60px #2505b3a4; 
+}
+
+.hover-img-neon-direita:hover {
+  box-shadow: 0 0 20px #d6007dbb, 0 0 40px #d6007dbb, 0 0 60px #d6007dbb; 
+}
 
 /* Efeito neon no texto */
 .box-hover-effect h2, .box-hover-effect p {
@@ -277,14 +288,14 @@ modelos nossos
 }
 
 .box-hover-effect:hover h2, .box-hover-effect:hover p {
-  text-shadow: 0 0 10px #ffffff50, 0 0 20px #ffffff65, 0 0 30px #ffffff6b; /* Brilho neon no texto */
+  text-shadow: 0 0 10px #ffffff50, 0 0 20px #ffffff65, 0 0 30px #ffffff6b; 
 }
 
 
 
 .img-container {
   overflow: hidden;
-  border-radius: 55px; /* Opcional, para manter o arredondamento no contêiner */
+  border-radius: 55px;
 }
 
 .img-haroldo {
@@ -293,7 +304,7 @@ modelos nossos
 }
 
 .img-haroldo:hover {
-  transform: scale(1.2); /* Ajuste o valor conforme necessário */
+  transform: scale(1.2);
 }
 
 .services .service-item.item-green-unoeste i {
@@ -311,7 +322,7 @@ modelos nossos
 .image-container {
   position: relative;
   width: 100%;
-  max-width: 100%; /* Certifica que a imagem não ultrapasse o tamanho da tela */
+  max-width: 100%;
 }
 
 .responsive-img {
@@ -324,31 +335,23 @@ modelos nossos
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* O texto segue a largura da imagem */
-  height: 100%; /* Ocupa toda a altura da imagem */
+  width: 100%; 
+  height: 100%; 
   display: flex;
   justify-content: left;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semitransparente */
-  font-size: clamp(14px, 2vw, 24px); /* Limita o tamanho da fonte entre 14px e 24px */
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: clamp(14px, 2vw, 24px); 
 }
 
 .overlay-text p {
   margin: 0;
-  max-width: 50%; /* Controla a largura do texto para ser responsivo */
+  max-width: 50%;
   line-height: 1.4;
 }
-
-
-
-
-
-
-
-
 
 .box {
   width: 100%;
@@ -364,33 +367,33 @@ modelos nossos
 
 .content-wrapper {
   display: flex;
-  justify-content: space-between; /* Espaça o texto e a imagem */
-  align-items: flex-start; /* Alinha os itens no topo */
-  flex-wrap: wrap; /* Para garantir que em telas pequenas os itens fiquem empilhados */
+  justify-content: space-between; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
 }
 
 .content-wrapper-atracoes {
-  justify-content: space-between; /* Espaça o texto e a imagem */
-  align-items: flex-start; /* Alinha os itens no topo */
-  flex-wrap: wrap; /* Para garantir que em telas pequenas os itens fiquem empilhados */
+  justify-content: space-between; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
 }
 
 .box h2 {
   text-align: center;
-  width: 100%; /* Faz o título ocupar toda a largura acima */
+  width: 100%; 
   margin-bottom: 1rem;
 }
 
 .box p {
-  flex: 1; /* O parágrafo ocupará o máximo possível de espaço */
+  flex: 1; 
   text-align: justify;
   line-height: 1.6;
-  margin-right: 2rem; /* Espaço entre o parágrafo e a imagem */
+  margin-right: 2rem; 
 }
 
 .image-container {
-  flex-shrink: 0; /* Impede que a imagem diminua excessivamente */
-  max-width: 500px; /* Limita o tamanho da imagem */
+  flex-shrink: 0; 
+  max-width: 500px; 
   margin-top: 1rem;
 }
 
@@ -401,23 +404,20 @@ modelos nossos
 }
 
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
   .content-wrapper {
-    flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+    flex-direction: column; 
   }
 
   .box p {
-    margin-right: 0; /* Remove o espaçamento lateral no modo empilhado */
-    margin-bottom: 1rem; /* Adiciona um espaçamento inferior entre o texto e a imagem */
+    margin-right: 0; 
+    margin-bottom: 1rem; 
   }
 
   .image-container {
-    width: 100%; /* A imagem ocupará 100% da largura disponível */
+    width: 100%;
   }
 }
-
-
 
 .containerr{
   padding: 2rem;
@@ -476,7 +476,6 @@ modelos nossos
   cursor: pointer;
 }
 
-/* Garante que a janela de tradução apareça separada do ícone */
 [vw-plugin-wrapper] {
   position: fixed;
   bottom: 80px; /* Alinhado acima do botão, mas ajustável */
@@ -484,12 +483,10 @@ modelos nossos
   z-index: 999; /* Abaixo do ícone */
 }
 
-/* Oculta a janela de tradução até que o ícone seja clicado */
 [vw-plugin-wrapper] {
   display: none;
 }
 
-/* Quando o botão for clicado, exibe a janela de tradução */
 [vw-access-button].active + [vw-plugin-wrapper] {
   display: block;
 }
@@ -499,7 +496,6 @@ modelos nossos
 }
 
 
-  /* Para telas menores, as imagens ficarão uma abaixo da outra */
 @media (max-width: 768px) {
   .portfolio-item {
     flex-direction: column;
@@ -514,9 +510,6 @@ modelos nossos
 /*
 modelos nossos
 */
-
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: var(--verde-unoeste);
@@ -2078,5 +2071,3 @@ section,
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); } /* Movimenta até o final dos 6 slides */
 }
-
-
