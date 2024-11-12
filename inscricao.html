@@ -113,8 +113,13 @@
                         </div>
 
                         <div class="col-md-6">
+                          <label for="telefone-field" class="pb-2">Telefone</label>
+                          <input type="text" class="form-control" name="telefone" id="telefone-field" placeholder="(99)99999-9999" onkeypress="mTel(this)" maxlength="15">
+                        </div>
+
+                        <div class="col-md-12">
                             <label for="email-field" class="pb-2">E-mail</label>
-                            <input type="email" class="form-control" name="email" id="email-field" required="">
+                            <input type="email" class="form-control" name="email" id="email-field" required="" placeholder="xxxxxx@xxxxx.com" onblur="validarEmail(this)">
                         </div>
 
                         <div class="col-md-12">
@@ -124,12 +129,12 @@
 
                         <div class="col-md-6">
                           <label for="cep-field" class="pb-2">CEP</label>
-                          <input type="text" class="form-control" name="cep" id="cep-field" placeholder="99.999-999" onkeypress="mCEP()" required="">
+                          <input type="text" class="form-control" name="cep" id="cep-field" placeholder="99.999-999" onkeypress="mCEP()" maxlength="10">
                         </div>
 
                         <div class="col-md-6">
                           <label for="cpf-field" class="pb-2">CPF</label>
-                          <input type="text" class="form-control" name="cpf" id="cpf-field" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" onblur="validarCPF()" required="">
+                          <input type="text" class="form-control" name="cpf" id="cpf-field" placeholder="999.999.999-99" onkeypress="mCpf(this)" maxlength="14" onblur="validarCPF(this)"  >
                         </div>
 
                         <div class="col-md-6">

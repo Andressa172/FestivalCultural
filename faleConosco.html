@@ -118,7 +118,7 @@
                       </div>
                       <div class="col-md-6">
                         <label for="email-field" class="pb-2">E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email-field" required="">
+                        <input type="email" class="form-control" name="email" id="email-field" required="" placeholder="xxxxxx@xxxxx.com" onblur="validarEmail(this)">
                       </div>
                       
                         <div class="col-md-12">
@@ -173,6 +173,7 @@
   <!-- Main JS File -->
    
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/nosso.js"></script>
   <script>
     const slider = document.getElementById('auto-slider');
     let scrollInterval;
