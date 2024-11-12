@@ -58,93 +58,139 @@
       </nav>
   </header>
 <main class="main">
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
+  <section id="contact" class="contact section">
+    <div class="container section-title" data-aos="fade-up">
         <h2 style="font-size: 50px;">Inscrição</h2>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <h3><b>Entre em contato</b></h3><br>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Endereço</h3>
-                  <p>Rua José Bongiovani, 700 - CEP 19050-920
-                    Bloco H - 1º andar - Presidente Prudente SP</p>
+            <div class="col-lg-5">
+                <div class="info-wrap">
+                    <h3><b>Entre em contato</b></h3><br>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Rua José Bongiovani, 700 - CEP 19050-920 Bloco H - 1º andar - Presidente Prudente SP</p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(18) 3229-1060</p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-whatsapp flex-shrink-0"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>(18) 99105-4306</p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>fipp@unoeste.edu.br</p>
+                        </div>
+                    </div>
+                    <iframe title="localização da Unoeste no Google Maps"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.8219606375337!2d-51.40529518785914!3d-22.13276291058586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45b18f82b4f%3A0xc61c929c186b7d81!2sFIPP!5e0!3m2!1sen!2sus!4v1725729481872!5m2!1sen!2sus"
+                        width="600" height="450" style="border:0; width: 100%; height: 270px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-              </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Telefone</h3>
-                  <p>(18) 3229-1060</p>
-                </div>
-              </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-whatsapp flex-shrink-0"></i>
-                <div>
-                  <h3>WhatsApp</h3>
-                  <p>(18) 99105-4306</p>
-                </div>
-              </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>E-mail</h3>
-                  <p>fipp@unoeste.edu.br</p>
-                </div>
-              </div>
-              <iframe title="localização da Unoeste no Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.8219606375337!2d-51.40529518785914!3d-22.13276291058586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45b18f82b4f%3A0xc61c929c186b7d81!2sFIPP!5e0!3m2!1sen!2sus!4v1725729481872!5m2!1sen!2sus" 
-              width="600" height="450" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-          </div>
+            </div>
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Nome completo</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">E-mail</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="cpf-field" class="pb-2">CPF</label>
-                  <input type="text" class="form-control" name="cpf" id="cpf-field" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required="">
-                </div>
-                <div class="col-md-12">
-                  <label for="course-field" class="pb-2">Curso</label>
-                  <select class="form-control" name="course" id="course-field" required="">
-                    <option value="">Selecione seu curso</option>
-                    <option value="ciencias-da-computacao">Ciências da Computação</option>
-                    <option value="analise-e-desenvolvimento-de-sistemas">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="engenharia-de-software">Engenharia de Software</option>
-                    <option value="sistemas-de-informacao">Sistemas de Informação</option>
-                    <option value="outro-curso">Outro curso</option>
-                    <option value="convidado">Convidado</option>
-                  </select>
-                </div>
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Deixe sua sugestão para o evento</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada. Obrigado</div>
-                  <button type="submit">Enviar</button>
-                </div>
-              </div>
-            </form>
-          </div>
+            <div class="col-lg-7">
+                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+
+                      <div class="col-md-6">
+                            <label for="name-field" class="pb-2">Nome completo</label>
+                            <input type="text" name="name" id="name-field" class="form-control" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email-field" class="pb-2">E-mail</label>
+                            <input type="email" class="form-control" name="email" id="email-field" required="">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="address-field" class="pb-2">Endereço</label>
+                            <input type="text" class="form-control" name="address" id="address-field" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="cep-field" class="pb-2">CEP</label>
+                          <input type="text" class="form-control" name="cep" id="cep-field" placeholder="99.999-999" onkeypress="mCEP()" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="cpf-field" class="pb-2">CPF</label>
+                          <input type="text" class="form-control" name="cpf" id="cpf-field" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" onblur="validarCPF()" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="course-field" class="pb-2">Curso</label>
+                            <select class="form-control" name="course" id="course-field" required="">
+                                <option value="">Selecione seu curso</option>
+                                <option value="ciencias-da-computacao">Ciências da Computação</option>
+                                <option value="analise-e-desenvolvimento-de-sistemas">Análise e Desenvolvimento de Sistemas</option>
+                                <option value="engenharia-de-software">Engenharia de Software</option>
+                                <option value="sistemas-de-informacao">Sistemas de Informação</option>
+                                <option value="convidado">Convidado</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                          <label for="linked-ra-field" class="pb-2">Se você é convidado, está sendo convidado por quem? (Informar RA)</label>
+                          <input type="text" class="form-control" name="linked-ra" id="linked-ra-field" oninput="validarRA(this)">
+                        </div>
+                        
+                        <div class="col-md-12">
+                          <label for="linked-ra-field" class="pb-2">Se você não é convidado, informar seu RA:</label>
+                          <input type="text" class="form-control" name="linked-ra" id="linked-ra-field-2" oninput="validarRA(this)">
+                        </div>
+                        
+                      
+                        <div class="col-md-12">
+                            <label for="group-field" class="pb-2">Tem grupo?</label>
+                            <select class="form-control" name="group" id="group-field">
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="group-details-field" class="pb-2">Se sim, informe RA e nome de todos</label>
+                            <textarea class="form-control" name="group-details" id="group-details-field" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="instruments-field" class="pb-2">Quais instrumentos?</label>
+                            <textarea class="form-control" name="instruments" id="instruments-field" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="microphones-field" class="pb-2">Quantos microfones?</label>
+                            <input type="number" class="form-control" name="microphones" id="microphones-field" min="0">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="music-field" class="pb-2">Qual música?</label>
+                            <input type="text" class="form-control" name="music" id="music-field">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="lights-field" class="pb-2">Deseja algum tipo de luz?</label>
+                            <input type="text" class="form-control" name="lights" id="lights-field">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
   </main>
 
   <footer id="footer" class="footer light-background">
@@ -181,6 +227,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/nosso.js"></script>
   <script>
       
     const btnMobile = document.getElementById('btn-mobile');
