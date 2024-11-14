@@ -109,7 +109,8 @@
 
                       <div class="col-md-6">
                             <label for="name-field" class="pb-2">Nome completo</label>
-                            <input type="text" name="name" id="name-field" class="form-control" required="">
+                            <input type="text" name="name" id="name-field" class="form-control" required="" placeholder="José Silva" onblur="validarNomeCompleto(this)">
+                            <span id="mensagemErro" class="mensagemErro"></span>
                         </div>
 
                         <div class="col-md-6">

@@ -24,6 +24,17 @@
   --nav-dropdown-hover-color: #34b7a7; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
+/* CLASSES PARA VALIDAÇÕES */
+.erro
+{
+  border: 2px solid red;
+}
+.mensagemErro
+{
+  color: red;
+  font-size: 0.9em;
+}
+
 /*CLASSES DAS EDIÇÕES ANTERIORES*/
 .wrapper {
   width: 100%;

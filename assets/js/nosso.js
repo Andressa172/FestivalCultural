@@ -113,5 +113,43 @@ function validarEmail(input)
        alert("Erro, email invalido!!!");
    }
 }
+
+function validarNomeCompleto(nome)
+{
+   var nomeCompleto = nome.value.trim();
+   var mensagemErro = "";
+   var mensagem = document.getElementById("mensagemErro");
+   var partes = nomeCompleto.split(" ");
+   var numExp = /\d/;
+
+   nome.classList.remove("erro");
+   mensagem.innerHTML = "";
+
+   //verifica se tem espaços e verifica se tem duas partes no nome
+   if(!nomeCompleto.includes(" ") || partes[0].trim().length >= 0 || partes[1]?.trim().length === 0)
+   {
+       mensagemErro += "Nome inválido! Precisa inserir o nome completo.<br>";
+       nome.classList.add("erro");
+   }
+
+   //verifica se não tem numero
+   if(numExp.test(nomeCompleto))
+   {
+      mensagemErro += "Nome inválido! Não pode conter números.<br>";
+      nome.classList.add("erro");
+   }
+
+   //tudo ok
+   if(partes[0].trim().length > 0 && partes[1]?.trim().length > 0 && !numExp.test(nomeCompleto)) 
+   {
+      alert("Nome inserido com sucesso!!!");
+      mensagemErro = "";
+      mensagem.innerHTML = mensagemErro;
+   }
+
+   // Exibe mensagem de erro, se houver
+   if(mensagemErro)
+       mensagem.innerHTML = mensagemErro;
+}
  
  
