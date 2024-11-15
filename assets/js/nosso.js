@@ -81,6 +81,29 @@ function validarCPF()
     event.target.value = cep;
  }
 
+ function validarCEP(cep)
+ {
+   var cepValue = cep.value;
+   var mensagemErro = "";
+   var mensagem = document.getElementById("mensagemErro-cep");
+   var cepNumerico = cepValue.replace(/\D/g, "");
+
+   mensagem.innerHTML = "";
+
+   if(cepNumerico.length !== 8)
+   { 
+      mensagemErro = "Erro, CEP inválido! O CEP deve ter exatamente 8 dígitos.";
+      cep.classList.add("erro");
+   }
+   else
+      cep.classList.remove("erro");
+
+   if (mensagemErro)
+      mensagem.innerHTML = mensagemErro;
+   else
+      mensagem.innerHTML = "";
+}
+
  function mTel ()
  {
    var tel = event.target.value;
@@ -104,13 +127,49 @@ function validarCPF()
    event.target.value = tel;
 }
 
-function validarEmail(input)
+function validarTelefone(telefone)
+{
+   var tel = telefone.value;
+   var mensagemErro = "";
+   var mensagem = document.getElementById("mensagemErro-telefone");
+   var telNumerico = tel.replace(/\D/g, "");
+
+   mensagem.innerHTML = "";
+
+   if(telNumerico.length < 11)
+   { 
+      mensagemErro = "Erro, número de telefone inválido! O telefone deve ter pelo menos 10 dígitos.";
+      telefone.classList.add("erro");
+   }
+   else
+      telefone.classList.remove("erro");
+
+   if(mensagemErro)
+      mensagem.innerHTML = mensagemErro;
+   else
+      mensagem.innerHTML = "";
+}
+
+function validarEmail(email)
 {
    var valida = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   var mensagemErro = "";
+   var mensagem = document.getElementById("mensagemErro-email");
 
-   if (!valida.test(input.value))
+   mensagem.innerHTML = "";
+
+   if(!valida.test(email.value)) 
    {
-       alert("Erro, email invalido!!!");
+      mensagemErro = "Erro, email inválido!";
+      email.classList.add("erro");
+   }
+
+   if(mensagemErro) 
+      mensagem.innerHTML = mensagemErro;
+   else 
+   {
+      email.classList.remove("erro");
+      mensagem.innerHTML = "";
    }
 }
 
@@ -118,7 +177,7 @@ function validarNomeCompleto(nome)
 {
    var nomeCompleto = nome.value.trim();
    var mensagemErro = "";
-   var mensagem = document.getElementById("mensagemErro");
+   var mensagem = document.getElementById("mensagemErro-nome");
    var partes = nomeCompleto.split(" ");
    var numExp = /\d/;
 

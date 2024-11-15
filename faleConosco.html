@@ -114,11 +114,13 @@
                     <div class="row gy-4">
                       <div class="col-md-6">
                         <label for="name-field" class="pb-2">Nome completo</label>
-                        <input type="text" name="name" id="name-field" class="form-control" required="">
+                        <input type="text" name="name" id="name-field" class="form-control" required="" placeholder="José Silva" onblur="validarNomeCompleto(this)">
+                        <span id="mensagemErro-nome" class="mensagemErro"></span>
                       </div>
                       <div class="col-md-6">
                         <label for="email-field" class="pb-2">E-mail</label>
                         <input type="email" class="form-control" name="email" id="email-field" required="" placeholder="xxxxxx@xxxxx.com" onblur="validarEmail(this)">
+                        <span id="mensagemErro-email" class="mensagemErro"></span>
                       </div>
                       
                         <div class="col-md-12">
