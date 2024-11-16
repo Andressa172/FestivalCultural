@@ -158,12 +158,15 @@
                         <div class="col-md-12">
                           <label for="linked-ra-field" class="pb-2">Se você é convidado, está sendo convidado por quem? (Informar RA)</label>
                           <input type="text" class="form-control" name="linked-ra" id="linked-ra-field" oninput="validarRA(this)">
-                        </div>
-                        
-                        <div class="col-md-12">
-                          <label for="linked-ra-field" class="pb-2">Se você não é convidado, informar seu RA:</label>
+                          <span id="mensagemErro-linked-ra" class="mensagemErro"></span>
+                      </div>
+                      
+                      <div class="col-md-12">
+                          <label for="linked-ra-field-2" class="pb-2">Se você não é convidado, informar seu RA:</label>
                           <input type="text" class="form-control" name="linked-ra" id="linked-ra-field-2" oninput="validarRA(this)">
-                        </div>
+                          <span id="mensagemErro-linked-ra-2" class="mensagemErro"></span>
+                      </div>
+                      
                         
                         <div class="col-md-12">
                             <label for="group-field" class="pb-2">Tem grupo?</label>

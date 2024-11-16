@@ -1,20 +1,20 @@
-function validarRA(input)
-{
-    var ra = input.value.replace(/\D/g, "");
-    
-    if (ra.length > 9){
-        ra = ra.substring(0, 9);
-    }
-    
-    input.value = ra;
-    
-    if (ra.length !== 9){
-        input.setCustomValidity("O RA deve conter exatamente 9 números.");
-    }
-    else{
-        input.setCustomValidity("");
-    }
+function validarRA(input){
+   var ra = input.value.replace(/\D/g, ""); 
+   var mensagemErro = input.nextElementSibling;
+
+   if(ra.length>9){
+       ra = ra.substring(0, 9); 
+   }
+   input.value = ra;
+   if (ra.length !== 9){
+       mensagemErro.textContent = "O RA deve conter exatamente 9 números.";
+       input.setCustomValidity("O RA deve conter exatamente 9 números.");
+   }else{
+       mensagemErro.textContent = "";
+       input.setCustomValidity("");
+   }
 }
+
 
 function mCpf()
 {
@@ -36,7 +36,7 @@ function validarCPF(cpf) {
 
    if (cpfNumerico.length !== 11 || 
        /^(\d)\1{10}$/.test(cpfNumerico)) {
-      mensagemErro = "Erro, CPF inválido! O CPF deve ter 11 dígitos.";
+      mensagemErro = "O CPF deve ter 11 dígitos.";
       cpf.classList.add("erro");
    } else {
       var ok = 1;
@@ -60,7 +60,7 @@ function validarCPF(cpf) {
       }
 
       if (ok === 0) {
-         mensagemErro = "Erro, CPF inválido! O CPF não passou na validação.";
+         mensagemErro = "O CPF não passou na inválido.";
          cpf.classList.add("erro");
       } else {
          cpf.classList.remove("erro");
@@ -92,7 +92,7 @@ function validarCPF(cpf) {
 
    if(cepNumerico.length !== 8)
    { 
-      mensagemErro = "Erro, CEP inválido! O CEP deve ter exatamente 8 dígitos.";
+      mensagemErro = "O CEP deve ter exatamente 8 dígitos.";
       cep.classList.add("erro");
    }
    else
@@ -138,7 +138,7 @@ function validarTelefone(telefone)
 
    if(telNumerico.length < 11)
    { 
-      mensagemErro = "Erro, número de telefone inválido! O telefone deve ter pelo menos 10 dígitos.";
+      mensagemErro = "O telefone deve ter pelo menos 10 dígitos.";
       telefone.classList.add("erro");
    }
    else
@@ -160,7 +160,7 @@ function validarEmail(email)
 
    if(!valida.test(email.value)) 
    {
-      mensagemErro = "Erro, email inválido!";
+      mensagemErro = "Email inválido!";
       email.classList.add("erro");
    }
 
@@ -187,21 +187,20 @@ function validarNomeCompleto(nome)
    //verifica se tem espaços e verifica se tem duas partes no nome
    if(!nomeCompleto.includes(" ") || partes[0].trim().length >= 0 || partes[1]?.trim().length === 0)
    {
-       mensagemErro += "Nome inválido! Precisa inserir o nome completo.<br>";
+       mensagemErro += "Insira o nome completo.<br>";
        nome.classList.add("erro");
    }
 
    //verifica se não tem numero
    if(numExp.test(nomeCompleto))
    {
-      mensagemErro += "Nome inválido! Não pode conter números.<br>";
+      mensagemErro += "Não pode conter números.<br>";
       nome.classList.add("erro");
    }
 
    //tudo ok
    if(partes[0].trim().length > 0 && partes[1]?.trim().length > 0 && !numExp.test(nomeCompleto)) 
    {
-      alert("Nome inserido com sucesso!!!");
       mensagemErro = "";
       mensagem.innerHTML = mensagemErro;
    }
