@@ -26,51 +26,51 @@ function mCpf()
    event.target.value = cpf;
 }
 
-function validarCPF()
-{
-   var cpf = event.target.value;
-   var ok = 1;
-   var add;
-   if (cpf != "") {
-      cpf = cpf.replace(/[^\d]+/g, '');
-      if (cpf.length != 11 ||
-         cpf == "00000000000" ||
-         cpf == "11111111111" ||
-         cpf == "22222222222" ||
-         cpf == "33333333333" ||
-         cpf == "44444444444" ||
-         cpf == "55555555555" ||
-         cpf == "66666666666" ||
-         cpf == "77777777777" ||
-         cpf == "88888888888" ||
-         cpf == "99999999999")
-             ok = 0;
-      if (ok == 1) {
+function validarCPF(cpf) {
+   var cpfValue = cpf.value;
+   var mensagemErro = "";
+   var mensagem = document.getElementById("mensagemErro-cpf");
+   var cpfNumerico = cpfValue.replace(/[^\d]+/g, "");
+
+   mensagem.innerHTML = "";
+
+   if (cpfNumerico.length !== 11 || 
+       /^(\d)\1{10}$/.test(cpfNumerico)) {
+      mensagemErro = "Erro, CPF inválido! O CPF deve ter 11 dígitos.";
+      cpf.classList.add("erro");
+   } else {
+      var ok = 1;
+      var add, rev;
+      add = 0;
+      for (var i = 0; i < 9; i++) {
+         add += parseInt(cpfNumerico.charAt(i)) * (10 - i);
+      }
+      rev = 11 - (add % 11);
+      if (rev === 10 || rev === 11) rev = 0;
+      if (rev !== parseInt(cpfNumerico.charAt(9))) ok = 0;
+
+      if (ok === 1) {
          add = 0;
-         for (i = 0; i < 9; i++)
-            add += parseInt(cpf.charAt(i)) * (10 - i);
-            rev = 11 - (add % 11);
-            if (rev == 10 || rev == 11)
-               rev = 0;
-            if (rev != parseInt(cpf.charAt(9)))
-               ok = 0;
-            if (ok == 1) {
-               add = 0;
-               for (i = 0; i < 10; i++)
-                  add += parseInt(cpf.charAt(i)) * (11 - i);
-               rev = 11 - (add % 11);
-               if (rev == 10 || rev == 11)
-                  rev = 0;
-               if (rev != parseInt(cpf.charAt(10)))
-                  ok = 0;
-            }
-        }
-        if (ok == 0) {
-           alert("Ops... Ocorreu um problema... CPF inválido!");
-           //event.target.focus();
-        }
-    }
- }
+         for (var i = 0; i < 10; i++) {
+            add += parseInt(cpfNumerico.charAt(i)) * (11 - i);
+         }
+         rev = 11 - (add % 11);
+         if (rev === 10 || rev === 11) rev = 0;
+         if (rev !== parseInt(cpfNumerico.charAt(10))) ok = 0;
+      }
+
+      if (ok === 0) {
+         mensagemErro = "Erro, CPF inválido! O CPF não passou na validação.";
+         cpf.classList.add("erro");
+      } else {
+         cpf.classList.remove("erro");
+      }
+   }
+
+   mensagem.innerHTML = mensagemErro;
+}
+
+
 
  function mCEP()
  {

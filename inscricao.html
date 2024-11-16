@@ -138,7 +138,9 @@
 
                         <div class="col-md-6">
                           <label for="cpf-field" class="pb-2">CPF</label>
-                          <input type="text" class="form-control" name="cpf" id="cpf-field" placeholder="999.999.999-99" onkeypress="mCpf(this)" maxlength="14" onblur="validarCPF(this)"  >
+                          <input type="text" class="form-control" name="cpf" id="cpf-field" placeholder="999.999.999-99" 
+                                 onkeypress="mCpf(this)" onblur="validarCPF(this)" maxlength="14">
+                          <span id="mensagemErro-cpf" class="mensagemErro"></span>
                         </div>
 
                         <div class="col-md-6">
@@ -163,10 +165,9 @@
                           <input type="text" class="form-control" name="linked-ra" id="linked-ra-field-2" oninput="validarRA(this)">
                         </div>
                         
-                      
                         <div class="col-md-12">
                             <label for="group-field" class="pb-2">Tem grupo?</label>
-                            <select class="form-control" name="group" id="group-field">
+                            <select class="form-control" name="group" id="group-field" required>
                                 <option value="nao">Não</option>
                                 <option value="sim">Sim</option>
                             </select>
@@ -176,21 +177,65 @@
                             <textarea class="form-control" name="group-details" id="group-details-field" rows="4"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <label for="instruments-field" class="pb-2">Quais instrumentos?</label>
+                            <label for="instruments-field" class="pb-2">Terá instrumentos? Quais?</label>
                             <textarea class="form-control" name="instruments" id="instruments-field" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="description-field" class="pb-2">Descrição do que será feito (se for tocar música, informar o nome)</label>
+                          <textarea class="form-control" name="description" id="description-field" rows="4"></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="microphones-field" class="pb-2">Quantos microfones?</label>
-                            <input type="number" class="form-control" name="microphones" id="microphones-field" min="0">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="music-field" class="pb-2">Qual música?</label>
-                            <input type="text" class="form-control" name="music" id="music-field">
+                            <input type="number" class="form-control" name="microphones" id="microphones-field" min="0" max="20">
                         </div>
                         <div class="col-md-12">
                             <label for="lights-field" class="pb-2">Deseja algum tipo de luz?</label>
                             <input type="text" class="form-control" name="lights" id="lights-field">
                         </div>
+                          <div class="col-md-12">
+                            <label for="resources-field" class="pb-2">Precisa de recursos adicionais? (Ex.: cadeiras, pedestais)</label>
+                            <textarea class="form-control" name="resources" id="resources-field" rows="3" placeholder="Descreva os recursos necessários"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="duration-field" class="pb-2">Qual será a duração estimada da sua apresentação?</label>
+                            <select class="form-control" name="duration" id="duration-field" required>
+                                <option value="">Selecione a duração</option>
+                                <option value="ate-5">Até 5 minutos</option>
+                                <option value="5-10">5 a 10 minutos</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="image-authorization-field" class="pb-2">Autoriza o uso de sua imagem em fotos e vídeos do evento?</label>
+                          <select class="form-control" name="image-authorization" id="image-authorization-field" required>
+                              <option value="">Selecione uma opção</option>
+                              <option value="sim">Sim</option>
+                              <option value="nao">Não</option>
+                          </select>
+                      </div>
+                  
+                        <div class="col-md-12">
+                            <label for="category-field" class="pb-2">Selecione a categoria da sua apresentação</label>
+                            <select class="form-control" name="category" id="category-field" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="musica">Música</option>
+                                <option value="danca">Dança</option>
+                                <option value="teatro">Teatro</option>
+                                <option value="poesia">Poesia</option>
+                                <option value="stand-up">Stand-up</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="special-needs-field" class="pb-2">Tem alguma necessidade especial para sua apresentação?</label>
+                            <textarea class="form-control" name="special-needs" id="special-needs-field" rows="3" placeholder="Descreva suas necessidades especiais"></textarea>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="attachments-field" class="pb-2">Deseja enviar algum material de apoio? (Ex.: áudio, imagem)</label>
+                            <input type="file" class="form-control" name="attachments" id="attachments-field" accept=".jpg,.png,.mp3,.mp4,.pdf">
+                        </div>
+
                         <div class="col-md-12 text-center">
                             <button type="submit">Enviar</button>
                         </div>
