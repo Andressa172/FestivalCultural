@@ -1,0 +1,90 @@
+* {
+    font-family: Calibri, sans-serif;
+}
+
+
+.tab {
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.coluna {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+#f_Lista {
+    text-align: center;
+}
+
+#txt-texto {
+    width: 200px;
+}
+
+.btnExcluir {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-box {
+    flex: 1;
+    max-width: 40%;
+}
+
+.right-box {
+    flex: 1;
+    max-width: 55%;
+}
+
+form {
+    border: 1px solid #ccc; 
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.left-box {
+    width: 60%;
+}
+
+.tab {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.coluna {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
