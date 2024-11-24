@@ -1,8 +1,8 @@
 var dados = [
-    {id:1,nome:'Andressa'},
-    {id:2,nome:'Ruan'},
-    {id:3,nome:'Guilherme'},
-    {id:4,nome:'Thamires'},
+    {id:1,nome:'Andressa',cpf:111111111, telefone: "(18)996705-1005", cep:22},
+    {id:2,nome:'Ruan',cpf:111111111, telefone: 1899670517005, cep:22},
+    {id:3,nome:'Guilherme',cpf:111111111, telefone: 1899670517005, cep:22},
+    {id:4,nome:'Thamires',cpf:111111111, telefone: 1899670517005, cep:22},
 ]
 
 function montarTabela(){
@@ -13,6 +13,9 @@ function montarTabela(){
         html+=`<tr>
                  <th class="coluna"><input type="checkbox" data-id="${obj.id}"></th>
                  <td class="coluna">${obj.nome}</td>
+                 <td class="coluna">${obj.cpf}</td>
+                 <td class="coluna">${obj.telefone}</td>
+                 <td class="coluna">${obj.cep}</td>
                  <th class="coluna"><a onclick="excluirItem(${obj.id})">&#9746;</a></th>
                </tr> `
     }
@@ -38,17 +41,13 @@ function excluirItem(idDel)
     montarTabela();
 }
 
-function selecionarTodos() {
-    // Seleciona o checkbox principal
-    let cbPai = document.querySelector('#ckTodos');
-    if (!cbPai) return; // Garante que o checkbox principal existe no DOM
-
-    // Seleciona todos os checkboxes individuais
-    let vetCB = document.querySelectorAll('[data-id]');
-    if (vetCB.length === 0) return; // Verifica se há checkboxes disponíveis
-
-    // Marca/desmarca todos os checkboxes de acordo com o estado do checkbox principal
-    vetCB.forEach(cb => cb.checked = cbPai.checked);
+function selecionarTodos(){
+   let cbPai = document.querySelector('#ckTodos');
+   // pegar todos os checkbox que foram criados com data-id
+   let vetCB = document.querySelectorAll('[data-id]');
+   for (let objCb of vetCB){
+       objCb.checked = cbPai.checked;              
+   }
 }
 
 function excluirSelecionados(){

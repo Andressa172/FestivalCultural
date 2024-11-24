@@ -2,6 +2,19 @@
     font-family: Calibri, sans-serif;
 }
 
+#btnExcluirSelecionados
+{
+    display: inline-block; /* Garante que o botão seja exibido */
+    margin-top: 10px; /* Dá um espaço extra para evitar sobreposição */
+}
+
+
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
 
 .tab {
     border: 1px solid black;
