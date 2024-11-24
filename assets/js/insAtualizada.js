@@ -1,5 +1,5 @@
 var dados = [
-    {id:1,nome:'Andressa',cpf:111111111, telefone: "(18)996705-1005", cep:22},
+    {id:1,nome:'Andressa',cpf:111111111, telefone: 1899670517005, cep:22},
     {id:2,nome:'Ruan',cpf:111111111, telefone: 1899670517005, cep:22},
     {id:3,nome:'Guilherme',cpf:111111111, telefone: 1899670517005, cep:22},
     {id:4,nome:'Thamires',cpf:111111111, telefone: 1899670517005, cep:22},
