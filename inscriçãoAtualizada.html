@@ -117,11 +117,6 @@
                 </head>
                 <body>
                 <form id="f_Lista">
-                        <input type="text" id="txt-texto" />
-                        <input type="button" id="btn-add" value="+" />
-                        <br>
-                        <br>
-                        <br>
                         <div>
                             <table id="grid" class="tab">
                                 <thead>
@@ -130,9 +125,8 @@
                                             <input type="checkbox" id="ckTodos" onchange="">
                                         </th>
                                         <th class="coluna">Nome</th>
-                                        <th class="coluna">RA</th>
+                                        <th class="coluna">CPF</th>
                                         <th class="coluna">Telefone</th>
-                                        <th class="coluna">CEP</th>
                                         <th class="coluna">Ação</th>
                                     </tr>
                                 </thead>
@@ -209,7 +203,7 @@
                         </div>
                         
                         <div class="col-md-12">
-                            <label for="linked-ra-field-2" class="pb-2">Se você não é convidado, informar seu RA:</label>
+                            <label for="linked-ra-field-2" class="pb-2">Se você é estudante informe seu RA:</label>
                             <input type="text" class="form-control" name="linked-ra" id="linked-ra-field-2" oninput="validarRA(this)">
                             <span id="mensagemErro-linked-ra-2" class="mensagemErro"></span>
                         </div>
@@ -286,8 +280,9 @@
                             <input type="file" class="form-control" name="attachments" id="attachments-field" accept=".jpg,.png,.mp3,.mp4,.pdf">
                         </div>
                         <div class="col-md-12 text-center">
-                            <form id="form_adicionar">
-                                <button type="submit">Enviar</button>
+                            <form id="btn-add">
+                                <input type="text" placeholder="Digite algo">
+                                <button type="submit" id="btn-add">Enviar</button>
                             </form>
                         </div>
                     </div>

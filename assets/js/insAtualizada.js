@@ -1,8 +1,7 @@
 var dados = [
-    {id:1,nome:'Andressa',cpf:111111111, telefone: 1899670517005, cep:22},
-    {id:2,nome:'Ruan',cpf:111111111, telefone: 1899670517005, cep:22},
-    {id:3,nome:'Guilherme',cpf:111111111, telefone: 1899670517005, cep:22},
-    {id:4,nome:'Thamires',cpf:111111111, telefone: 1899670517005, cep:22},
+    {id:1,nome:'Andressa',cpf:"111.111.111-11", telefone: "(18)11111-1111"},
+    {id:2,nome:'Ruan',cpf:"222.222.222-22", telefone: "(18)22222-2222"},
+    {id:3,nome:'Guilherme',cpf:"333.333.333-33", telefone: "(18)33333-3333"},
 ]
 
 function montarTabela(){
@@ -15,15 +14,19 @@ function montarTabela(){
                  <td class="coluna">${obj.nome}</td>
                  <td class="coluna">${obj.cpf}</td>
                  <td class="coluna">${obj.telefone}</td>
-                 <td class="coluna">${obj.cep}</td>
                  <th class="coluna"><a onclick="excluirItem(${obj.id})">&#9746;</a></th>
                </tr> `
     }
     vTab.innerHTML = html;
 }
-function adicionarItem(){
-    let nomeInput = document.querySelector('#txt-texto');
-    let novoObj = {id:new Date().getTime(),nome:nomeInput.value}
+function adicionarItem()
+{
+    let nomeInput = document.querySelector('#name-field');
+    let cpfInput = document.querySelector('#cpf-field');
+    let telefoneInput = document.querySelector('#telefone-field');
+
+    let novoObj = {id:new Date().getTime(),nome:nomeInput.value,cpf:cpfInput.value,telefone:telefoneInput.value}
+
     dados.push(novoObj);
     montarTabela();
     nomeInput.value='';
