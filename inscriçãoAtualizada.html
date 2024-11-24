@@ -37,7 +37,36 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/checkbox.css">
-  
+  <script>
+    // Função para consultar o CEP e preencher o campo de endereço
+    async function consultaCEP() {
+        // Pega o valor do CEP
+        let vCEP = document.querySelector('#cep-field').value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        if (vCEP.length === 8) { // Verifica se o CEP tem 8 dígitos
+            let resp = await fetch(`https://viacep.com.br/ws/${vCEP}/json/`);
+            let dadosJson = await resp.json();
+            if (dadosJson.erro) {
+                alert('CEP não encontrado!');
+            } else {
+                // Preenche os campos com os dados recebidos da API
+                document.querySelector('#address-field').value = `${dadosJson.logradouro}, ${dadosJson.bairro}, ${dadosJson.localidade} - ${dadosJson.uf}`;
+            }
+        } else {
+            alert('Por favor, insira um CEP válido!');
+        }
+    }
+
+    // Função de validação de CEP
+    function validarCEP(input) {
+        const mensagemErro = document.getElementById('mensagemErro-cep');
+        let cep = input.value.replace(/\D/g, ''); // Remover caracteres não numéricos
+        if (cep.length !== 8) {
+            mensagemErro.textContent = 'CEP inválido. Verifique o formato.';
+        } else {
+            mensagemErro.textContent = '';
+        }
+    }
+    </script>
 </head>
 
 <body class="contact-page">
@@ -145,12 +174,12 @@
 
                         <div class="col-md-12">
                             <label for="address-field" class="pb-2">Endereço</label>
-                            <input type="text" class="form-control" name="address" id="address-field" required="">
+                            <input type="text" class="form-control" name="address" id="address-field" required="" readonly>
                         </div>
 
                         <div class="col-md-6">
                             <label for="cep-field" class="pb-2">CEP</label>
-                            <input type="text" class="form-control" name="cep" id="cep-field" required="" placeholder="99.999-999" onkeypress="mCEP()" onblur="validarCEP(this)" maxlength="10">
+                            <input type="text" class="form-control" name="cep" id="cep-field" required="" placeholder="99.999-999" onblur="consultaCEP()" maxlength="10" oninput="validarCEP(this)">
                             <span id="mensagemErro-cep" class="mensagemErro"></span>
                         </div>
 
