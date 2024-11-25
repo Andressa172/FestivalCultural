@@ -1,13 +1,13 @@
 * {
     font-family: Calibri, sans-serif;
+    box-sizing: border-box;
 }
 
 #btnExcluirSelecionados
 {
-    display: inline-block; /* Garante que o botão seja exibido */
-    margin-top: 10px; /* Dá um espaço extra para evitar sobreposição */
+    display: inline-block;
+    margin-top: 10px; 
 }
-
 
 
 input[type="checkbox"] {

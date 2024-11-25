@@ -2,6 +2,7 @@ var dados = [
     {id:1,nome:'Andressa',cpf:"111.111.111-11", telefone: "(18)11111-1111"},
     {id:2,nome:'Ruan',cpf:"222.222.222-22", telefone: "(18)22222-2222"},
     {id:3,nome:'Guilherme',cpf:"333.333.333-33", telefone: "(18)33333-3333"},
+    {id:3,nome:'Cassia',cpf:"444.444.444-44", telefone: "(18)44444-4444"},
 ]
 
 function montarTabela(){
